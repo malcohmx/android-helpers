@@ -3,7 +3,7 @@ package com.danimahardhika.android.helpers.license;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 import com.google.android.vending.licensing.AESObfuscator;

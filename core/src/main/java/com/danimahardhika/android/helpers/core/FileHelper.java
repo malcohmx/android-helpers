@@ -2,9 +2,9 @@ package com.danimahardhika.android.helpers.core;
 
 import android.content.Context;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.content.FileProvider;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

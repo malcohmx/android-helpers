@@ -1,8 +1,8 @@
 package com.danimahardhika.android.helpers.core;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.view.ContextThemeWrapper;
+import androidx.annotation.NonNull;
+import androidx.appcompat.view.ContextThemeWrapper;
 import android.view.View;
 
 /*

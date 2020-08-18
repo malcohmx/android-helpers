@@ -4,17 +4,17 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.support.design.internal.NavigationMenuView;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.NavigationView;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.navigation.NavigationView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.appcompat.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -109,7 +109,7 @@ public class ViewHelper {
 
     public static void setSearchViewBackgroundColor(@Nullable View view, int color) {
         if (view != null) {
-            View background = view.findViewById(android.support.v7.appcompat.R.id.search_plate);
+            View background = view.findViewById(androidx.appcompat.appcompat.R.id.search_plate);
             if (background != null) {
                 Context context = ContextHelper.getBaseContext(view);
                 background.setBackgroundColor(ColorHelper.get(context, color));
@@ -129,7 +129,7 @@ public class ViewHelper {
         if (view == null) return;
 
         ImageView searchIcon = view.findViewById(
-                android.support.v7.appcompat.R.id.search_mag_icon);
+                androidx.appcompat.appcompat.R.id.search_mag_icon);
         if (searchIcon == null) return;
 
         if (drawable == null) {
@@ -161,7 +161,7 @@ public class ViewHelper {
         if (view == null) return;
 
         ImageView closeIcon = view.findViewById(
-                android.support.v7.appcompat.R.id.search_close_btn);
+                androidx.appcompat.appcompat.R.id.search_close_btn);
         if (closeIcon != null) {
             if (drawable == null) {
                 ViewGroup viewGroup = (ViewGroup) closeIcon.getParent();

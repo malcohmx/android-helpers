@@ -1,7 +1,7 @@
 package com.danimahardhika.android.helpers.core;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /*
  * Android Helpers

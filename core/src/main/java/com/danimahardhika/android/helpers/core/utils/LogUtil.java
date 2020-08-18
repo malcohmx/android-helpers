@@ -1,6 +1,6 @@
 package com.danimahardhika.android.helpers.core.utils;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 /*
