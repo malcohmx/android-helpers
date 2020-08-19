@@ -55,7 +55,7 @@ class LicenseValidator {
     private final DeviceLimiter mDeviceLimiter;
 
     LicenseValidator(Policy policy, DeviceLimiter deviceLimiter, LicenseCheckerCallback callback,
-             int nonce, String packageName, String versionCode) {
+                     int nonce, String packageName, String versionCode) {
         mPolicy = policy;
         mDeviceLimiter = deviceLimiter;
         mCallback = callback;
@@ -81,10 +81,10 @@ class LicenseValidator {
     /**
      * Verifies the response from server and calls appropriate callback method.
      *
-     * @param publicKey public key associated with the developer account
+     * @param publicKey    public key associated with the developer account
      * @param responseCode server response code
-     * @param signedData signed data from server
-     * @param signature server signature
+     * @param signedData   signed data from server
+     * @param signature    server signature
      */
     public void verify(PublicKey publicKey, int responseCode, String signedData, String signature) {
         String userId = null;
@@ -96,7 +96,8 @@ class LicenseValidator {
             try {
                 Signature sig = Signature.getInstance(SIGNATURE_ALGORITHM);
                 sig.initVerify(publicKey);
-                sig.update(signedData.getBytes());
+                if (signedData != null)
+                    sig.update(signedData.getBytes());
 
                 if (!sig.verify(Base64.decode(signature))) {
                     Log.e(TAG, "Signature verification failed.");
