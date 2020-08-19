@@ -8,8 +8,8 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import android.support.design.internal.NavigationMenuView;
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.internal.NavigationMenuView;
 import com.google.android.material.navigation.NavigationView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -109,7 +109,7 @@ public class ViewHelper {
 
     public static void setSearchViewBackgroundColor(@Nullable View view, int color) {
         if (view != null) {
-            View background = view.findViewById(androidx.appcompat.appcompat.R.id.search_plate);
+            View background = view.findViewById(androidx.appcompat.R.id.search_plate);
             if (background != null) {
                 Context context = ContextHelper.getBaseContext(view);
                 background.setBackgroundColor(ColorHelper.get(context, color));
@@ -129,7 +129,7 @@ public class ViewHelper {
         if (view == null) return;
 
         ImageView searchIcon = view.findViewById(
-                androidx.appcompat.appcompat.R.id.search_mag_icon);
+                androidx.appcompat.R.id.search_mag_icon);
         if (searchIcon == null) return;
 
         if (drawable == null) {
@@ -161,7 +161,7 @@ public class ViewHelper {
         if (view == null) return;
 
         ImageView closeIcon = view.findViewById(
-                androidx.appcompat.appcompat.R.id.search_close_btn);
+                androidx.appcompat.R.id.search_close_btn);
         if (closeIcon != null) {
             if (drawable == null) {
                 ViewGroup viewGroup = (ViewGroup) closeIcon.getParent();
