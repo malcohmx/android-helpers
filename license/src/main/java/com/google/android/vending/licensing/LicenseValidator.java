@@ -96,13 +96,13 @@ class LicenseValidator {
             try {
                 Signature sig = Signature.getInstance(SIGNATURE_ALGORITHM);
                 sig.initVerify(publicKey);
-                if (signedData != null)
+                if (signedData != null) {
                     sig.update(signedData.getBytes());
-
-                if (!sig.verify(Base64.decode(signature))) {
-                    Log.e(TAG, "Signature verification failed.");
-                    handleInvalidResponse();
-                    return;
+                    if (!sig.verify(Base64.decode(signature))) {
+                        Log.e(TAG, "Signature verification failed.");
+                        handleInvalidResponse();
+                        return;
+                    }
                 }
             } catch (NoSuchAlgorithmException e) {
                 // This can't happen on an Android compatible device.
